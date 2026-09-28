@@ -1,1438 +1,508 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
->
-
-<meta
-    name="theme-color"
-    content="#050505"
->
-
-<meta
+  <title>FreeFlix — Free & Legal Cinema</title>
+  <meta
     name="description"
-    content="FreeFlix — a premium cinematic home for free and legally available films."
->
+    content="FreeFlix is a premium cinema interface for discovering legally available free films."
+  >
 
-<title>FREEFLIX — Cinema, Reimagined</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
->
-
-<link rel="stylesheet" href="style.css">
-```
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- =========================================================
-     CINEMATIC INTRO
-========================================================= -->
-
-<div class="intro-screen" id="introScreen">
-
-```
-<div class="intro-noise"></div>
-
-<div class="intro-center">
-
-    <div class="intro-symbol">
-        F
+  <!-- INTRO -->
+  <div class="intro-screen" id="introScreen">
+    <div class="intro-logo">
+      <span>F</span>
     </div>
+    <div class="intro-name">FREEFLIX</div>
+    <div class="intro-line"></div>
+  </div>
 
-    <div class="intro-wordmark">
-        FREEFLIX
-    </div>
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
 
-    <div class="intro-line">
-        <span></span>
-    </div>
-
-    <p>
-        CINEMA · WITHOUT BORDERS
-    </p>
-
-</div>
-```
-
-</div>
-
-<!-- =========================================================
-     HEADER
-========================================================= -->
-
-<header class="site-header" id="siteHeader">
-
-```
-<div class="header-left">
-
-    <a href="#" class="brand">
-
-        <span class="brand-logo">
-            F
-        </span>
-
-        <span class="brand-name">
-            FREEFLIX
-        </span>
-
+    <a href="index.html" class="brand">
+      <div class="brand-logo">F</div>
+      <div class="brand-name">FREEFLIX</div>
     </a>
 
     <nav class="main-nav">
-
-        <a href="#" class="nav-link active">
-            Home
-        </a>
-
-        <a href="#discover" class="nav-link">
-            Discover
-        </a>
-
-        <a href="#categories" class="nav-link">
-            Categories
-        </a>
-
-        <a href="#collection" class="nav-link">
-            Collection
-        </a>
-
+      <a href="#home">Home</a>
+      <a href="#discover">Discover</a>
+      <a href="#categories">Categories</a>
+      <a href="#collection">Collection</a>
     </nav>
 
-</div>
+    <div class="header-actions">
 
+      <button class="icon-button" id="searchOpen" aria-label="Search">
+        <span>⌕</span>
+      </button>
 
-<div class="header-right">
-
-    <button
-        class="header-icon"
-        id="searchOpen"
-        aria-label="Open search"
-    >
-        <span class="search-icon"></span>
-    </button>
-
-
-    <button
-        class="language-button"
-        id="languageButton"
-    >
+      <button class="language-button" id="languageButton">
         <span>EN</span>
-        <span class="language-chevron">⌄</span>
-    </button>
-
-
-    <button
-        class="profile-button"
-        aria-label="Profile"
-    >
-        <span class="profile-inner">
-            F
-        </span>
-    </button>
-
-</div>
-```
-
-</header>
-
-<!-- =========================================================
-     SEARCH PANEL
-========================================================= -->
-
-<div class="search-panel" id="searchPanel">
-
-```
-<div class="search-panel-inner">
-
-    <div class="search-heading">
-        <span>SEARCH FREEFLIX</span>
-        <button id="searchClose">×</button>
-    </div>
-
-    <div class="search-field-wrap">
-
-        <span class="large-search-icon"></span>
-
-        <input
-            type="search"
-            id="searchInput"
-            placeholder="Search movies, genres, classics..."
-            autocomplete="off"
-        >
-
-        <span class="search-shortcut">
-            ESC
-        </span>
+        <span>⌄</span>
+      </button>
 
     </div>
 
-    <div class="search-suggestions">
+  </header>
 
-        <span>Popular:</span>
+  <!-- SEARCH -->
+  <div class="search-panel" id="searchPanel">
 
-        <button>Classic</button>
-        <button>Horror</button>
-        <button>Comedy</button>
-        <button>Sci-Fi</button>
+    <div class="search-inner">
 
-    </div>
+      <div class="search-top">
+        <span>SEARCH CINEMA</span>
+        <button id="searchClose">✕</button>
+      </div>
 
-</div>
-```
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Search movies or genres..."
+        autocomplete="off"
+      >
 
-</div>
+      <div class="search-suggestions">
+        <button data-search="Drama">Drama</button>
+        <button data-search="Comedy">Comedy</button>
+        <button data-search="Sci-Fi">Sci-Fi</button>
+        <button data-search="Horror">Horror</button>
+      </div>
 
-<!-- =========================================================
-     LANGUAGE MENU
-========================================================= -->
-
-<div class="language-menu" id="languageMenu">
-
-```
-<button data-language="EN">
-    <span>English</span>
-    <b>EN</b>
-</button>
-
-<button data-language="ES">
-    <span>Español</span>
-    <b>ES</b>
-</button>
-
-<button data-language="FR">
-    <span>Français</span>
-    <b>FR</b>
-</button>
-
-<button data-language="DE">
-    <span>Deutsch</span>
-    <b>DE</b>
-</button>
-```
-
-</div>
-
-<!-- =========================================================
-     MAIN
-========================================================= -->
-
-<main>
-
-<!-- =========================================================
-     HERO
-========================================================= -->
-
-<section class="hero">
-
-```
-<div class="hero-background">
-
-    <div class="hero-glow hero-glow-one"></div>
-    <div class="hero-glow hero-glow-two"></div>
-
-    <div class="hero-grid"></div>
-
-    <div class="hero-vignette"></div>
-
-</div>
-
-
-<div class="hero-content">
-
-    <div class="hero-overline">
-
-        <span class="live-dot"></span>
-
-        <span>
-            FREE CINEMA
-        </span>
-
-        <i></i>
-
-        <span>
-            2026 COLLECTION
-        </span>
+      <div id="searchResultsText" class="search-results-text"></div>
 
     </div>
 
+  </div>
 
-    <div class="hero-title-wrap">
+  <!-- LANGUAGE MENU -->
+  <div class="language-menu" id="languageMenu">
 
-        <span class="hero-small-title">
-            THE
-        </span>
+    <button data-language="EN">English</button>
+    <button data-language="ES">Español</button>
+    <button data-language="FR">Français</button>
+    <button data-language="DE">Deutsch</button>
 
-        <h1 class="hero-title">
-            FREEFLIX
+  </div>
+
+  <main id="home">
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          FREE • LEGAL • CINEMA
+        </div>
+
+        <h1>
+          Cinema without<br>
+          the noise.
         </h1>
 
-        <span class="hero-subtitle">
-            ARCHIVE
-        </span>
+        <p>
+          Discover a clean, cinematic way to watch films that are
+          legally available for free.
+        </p>
 
-    </div>
+        <div class="hero-buttons">
 
+          <a href="#discover" class="primary-button">
+            Explore Cinema
+            <span>→</span>
+          </a>
 
-    <p class="hero-description">
+          <button class="secondary-button" id="randomMovie">
+            Random Film
+          </button>
 
-        Discover remarkable films, timeless stories and
-        unforgettable cinema in a beautifully crafted
-        streaming experience.
+        </div>
 
-    </p>
+      </div>
 
+      <div class="hero-art">
+        <div class="hero-f">F</div>
+        <div class="hero-circle"></div>
+      </div>
 
-    <div class="hero-meta">
+    </section>
 
-        <span>
-            FREE TO WATCH
-        </span>
+    <!-- STATS -->
+    <section class="stats-bar">
 
-        <i></i>
+      <div>
+        <strong>01</strong>
+        <span>Discover</span>
+      </div>
 
-        <span>
-            CLASSIC CINEMA
-        </span>
+      <div>
+        <strong>02</strong>
+        <span>Select</span>
+      </div>
 
-        <i></i>
+      <div>
+        <strong>03</strong>
+        <span>Watch</span>
+      </div>
 
-        <span>
-            LEGALLY AVAILABLE
-        </span>
+      <div>
+        <strong>04</strong>
+        <span>Enjoy</span>
+      </div>
 
-    </div>
+    </section>
 
+    <!-- DISCOVER -->
+    <section class="content-section" id="discover">
 
-    <div class="hero-actions">
+      <div class="section-heading">
 
-        <a
-            href="#discover"
-            class="primary-button"
+        <div>
+          <span class="section-label">CURATED CINEMA</span>
+          <h2>Discover</h2>
+        </div>
+
+        <p>
+          Explore films by story, atmosphere and genre.
+        </p>
+
+      </div>
+
+      <div class="cinema-grid" id="movieGrid">
+
+        <!-- MOVIE 1 -->
+        <article
+          class="cinema-card"
+          data-title="The First Screening"
+          data-genre="Drama"
+          data-description="A sample catalogue entry for the FreeFlix cinematic interface."
         >
 
-            <span class="button-play">
-                ▶
-            </span>
+          <div class="card-number">01</div>
 
-            <span>
-                Explore Cinema
-            </span>
+          <div class="card-art art-one">
+            <div class="card-art-letter">F</div>
+          </div>
 
-            <span class="button-arrow">
-                →
-            </span>
+          <div class="card-info">
 
-        </a>
+            <div>
+              <span class="card-genre">DRAMA</span>
+              <h3>The First Screening</h3>
+            </div>
 
+            <button class="card-play" aria-label="Open The First Screening">
+              ▶
+            </button>
 
-        <a
-            href="#collection"
-            class="secondary-button"
+          </div>
+
+        </article>
+
+        <!-- MOVIE 2 -->
+        <article
+          class="cinema-card"
+          data-title="Midnight Stories"
+          data-genre="Horror"
+          data-description="A sample horror catalogue entry for FreeFlix."
         >
 
-            <span class="button-plus">
-                +
-            </span>
+          <div class="card-number">02</div>
 
-            View Collection
+          <div class="card-art art-two">
+            <div class="card-art-letter">M</div>
+          </div>
 
-        </a>
+          <div class="card-info">
 
-    </div>
+            <div>
+              <span class="card-genre">HORROR</span>
+              <h3>Midnight Stories</h3>
+            </div>
 
+            <button class="card-play" aria-label="Open Midnight Stories">
+              ▶
+            </button>
 
-    <div class="hero-note">
+          </div>
 
-        <span class="note-line"></span>
+        </article>
 
-        <span>
-            No subscription required
-        </span>
+        <!-- MOVIE 3 -->
+        <article
+          class="cinema-card"
+          data-title="Beyond The Stars"
+          data-genre="Sci-Fi"
+          data-description="A sample science-fiction catalogue entry for FreeFlix."
+        >
 
-    </div>
+          <div class="card-number">03</div>
 
-</div>
+          <div class="card-art art-three">
+            <div class="card-art-letter">B</div>
+          </div>
 
+          <div class="card-info">
 
-<div class="hero-art">
+            <div>
+              <span class="card-genre">SCI-FI</span>
+              <h3>Beyond The Stars</h3>
+            </div>
 
-    <div class="art-orbit orbit-one"></div>
-    <div class="art-orbit orbit-two"></div>
-    <div class="art-orbit orbit-three"></div>
+            <button class="card-play" aria-label="Open Beyond The Stars">
+              ▶
+            </button>
 
-    <div class="art-core">
+          </div>
 
-        <span class="art-f">
-            F
-        </span>
+        </article>
 
-        <span class="art-core-line"></span>
+        <!-- MOVIE 4 -->
+        <article
+          class="cinema-card"
+          data-title="Golden Age"
+          data-genre="Comedy"
+          data-description="A sample comedy catalogue entry for FreeFlix."
+        >
 
-    </div>
+          <div class="card-number">04</div>
 
+          <div class="card-art art-four">
+            <div class="card-art-letter">G</div>
+          </div>
 
-    <div class="floating-letter letter-one">
-        F
-    </div>
+          <div class="card-info">
 
-    <div class="floating-letter letter-two">
-        F
-    </div>
+            <div>
+              <span class="card-genre">COMEDY</span>
+              <h3>Golden Age</h3>
+            </div>
 
-    <div class="floating-letter letter-three">
-        F
-    </div>
+            <button class="card-play" aria-label="Open Golden Age">
+              ▶
+            </button>
 
-</div>
+          </div>
 
+        </article>
 
-<div class="hero-bottom-fade"></div>
-```
+      </div>
 
-</section>
+      <div id="noResults" class="no-results">
+        No films found.
+      </div>
 
-<!-- =========================================================
-     QUICK STATS
-========================================================= -->
+    </section>
 
-<section class="stats-bar">
+    <!-- EDITORIAL -->
+    <section class="editorial">
 
-```
-<div class="stat">
+      <div class="editorial-number">01</div>
 
-    <strong>
-        01
-    </strong>
-
-    <span>
-        Discover
-    </span>
-
-</div>
-
-
-<div class="stat-line"></div>
-
-
-<div class="stat">
-
-    <strong>
-        02
-    </strong>
-
-    <span>
-        Choose
-    </span>
-
-</div>
-
-
-<div class="stat-line"></div>
-
-
-<div class="stat">
-
-    <strong>
-        03
-    </strong>
-
-    <span>
-        Watch
-    </span>
-
-</div>
-
-
-<div class="stats-message">
-
-    <span>
-        BUILT FOR PEOPLE
-    </span>
-
-    <strong>
-        Who love cinema.
-    </strong>
-
-</div>
-```
-
-</section>
-
-<!-- =========================================================
-     DISCOVER
-========================================================= -->
-
-<section
-    class="content-section"
-    id="discover"
->
-
-```
-<div class="section-heading">
-
-    <div>
-
-        <span class="section-kicker">
-            CURATED FOR YOU
-        </span>
-
+      <div>
+        <span>THE FREEFLIX IDEA</span>
         <h2>
-            Discover
-            <em>something.</em>
+          Less clutter.<br>
+          More cinema.
         </h2>
+      </div>
 
-    </div>
+      <p>
+        FreeFlix is designed around the film itself — simple discovery,
+        focused viewing and a premium cinematic experience.
+      </p>
 
+    </section>
 
-    <a
-        href="#"
-        class="text-link"
-    >
-        Explore all
-        <span>→</span>
-    </a>
+    <!-- COLLECTION -->
+    <section class="content-section collection-section" id="collection">
 
-</div>
+      <div class="section-heading">
 
-
-<div class="cinema-grid">
-
-
-    <!-- CARD 01 -->
-
-    <article
-        class="cinema-card"
-        data-title="The First Screening"
-        data-genre="Drama"
-    >
-
-        <div class="cinema-visual visual-one">
-
-            <div class="visual-noise"></div>
-
-            <div class="visual-lines"></div>
-
-            <div class="visual-number">
-                01
-            </div>
-
-            <div class="visual-monogram">
-                F
-            </div>
-
-            <div class="visual-label">
-                FREEFLIX
-            </div>
-
-            <button
-                class="card-play"
-                aria-label="Play"
-            >
-                ▶
-            </button>
-
+        <div>
+          <span class="section-label">YOUR SPACE</span>
+          <h2>Collection</h2>
         </div>
 
+      </div>
 
-        <div class="card-footer">
+      <div class="collection-box">
 
-            <div>
-
-                <span>
-                    DRAMA · CLASSIC
-                </span>
-
-                <h3>
-                    The First Screening
-                </h3>
-
-            </div>
-
-            <span class="card-year">
-                1930
-            </span>
-
+        <div>
+          <span>MY LIST</span>
+          <h3>Your saved films will appear here.</h3>
         </div>
 
-    </article>
+        <button class="secondary-button" id="collectionButton">
+          View Collection
+        </button>
 
+      </div>
 
-    <!-- CARD 02 -->
+    </section>
 
-    <article
-        class="cinema-card"
-        data-title="Midnight Stories"
-        data-genre="Horror"
-    >
+    <!-- CATEGORIES -->
+    <section class="category-section" id="categories">
 
-        <div class="cinema-visual visual-two">
+      <div class="section-heading">
 
-            <div class="visual-noise"></div>
-
-            <div class="visual-lines"></div>
-
-            <div class="visual-number">
-                02
-            </div>
-
-            <div class="visual-monogram">
-                F
-            </div>
-
-            <div class="visual-label">
-                MIDNIGHT
-            </div>
-
-            <button
-                class="card-play"
-                aria-label="Play"
-            >
-                ▶
-            </button>
-
+        <div>
+          <span class="section-label">EXPLORE</span>
+          <h2>Categories</h2>
         </div>
 
+      </div>
 
-        <div class="card-footer">
+      <div class="category-grid">
 
-            <div>
+        <button class="category-card" data-filter="Drama">
+          <span>01</span>
+          <strong>Drama</strong>
+          <small>Stories with depth</small>
+        </button>
 
-                <span>
-                    HORROR · CLASSIC
-                </span>
+        <button class="category-card" data-filter="Horror">
+          <span>02</span>
+          <strong>Horror</strong>
+          <small>Dark cinematic worlds</small>
+        </button>
 
-                <h3>
-                    Midnight Stories
-                </h3>
+        <button class="category-card" data-filter="Sci-Fi">
+          <span>03</span>
+          <strong>Sci-Fi</strong>
+          <small>Beyond the ordinary</small>
+        </button>
 
-            </div>
+        <button class="category-card" data-filter="Comedy">
+          <span>04</span>
+          <strong>Comedy</strong>
+          <small>Light stories</small>
+        </button>
 
-            <span class="card-year">
-                1931
-            </span>
+      </div>
 
-        </div>
+    </section>
 
-    </article>
+    <!-- EXPERIENCE -->
+    <section class="experience">
 
+      <div class="experience-copy">
 
-    <!-- CARD 03 -->
-
-    <article
-        class="cinema-card"
-        data-title="Beyond The Stars"
-        data-genre="Sci-Fi"
-    >
-
-        <div class="cinema-visual visual-three">
-
-            <div class="visual-noise"></div>
-
-            <div class="visual-lines"></div>
-
-            <div class="visual-number">
-                03
-            </div>
-
-            <div class="visual-monogram">
-                F
-            </div>
-
-            <div class="visual-label">
-                BEYOND
-            </div>
-
-            <button
-                class="card-play"
-                aria-label="Play"
-            >
-                ▶
-            </button>
-
-        </div>
-
-
-        <div class="card-footer">
-
-            <div>
-
-                <span>
-                    SCI-FI · CLASSIC
-                </span>
-
-                <h3>
-                    Beyond The Stars
-                </h3>
-
-            </div>
-
-            <span class="card-year">
-                1959
-            </span>
-
-        </div>
-
-    </article>
-
-
-    <!-- CARD 04 -->
-
-    <article
-        class="cinema-card"
-        data-title="Golden Age"
-        data-genre="Comedy"
-    >
-
-        <div class="cinema-visual visual-four">
-
-            <div class="visual-noise"></div>
-
-            <div class="visual-lines"></div>
-
-            <div class="visual-number">
-                04
-            </div>
-
-            <div class="visual-monogram">
-                F
-            </div>
-
-            <div class="visual-label">
-                GOLDEN
-            </div>
-
-            <button
-                class="card-play"
-                aria-label="Play"
-            >
-                ▶
-            </button>
-
-        </div>
-
-
-        <div class="card-footer">
-
-            <div>
-
-                <span>
-                    COMEDY · CLASSIC
-                </span>
-
-                <h3>
-                    Golden Age
-                </h3>
-
-            </div>
-
-            <span class="card-year">
-                1926
-            </span>
-
-        </div>
-
-    </article>
-
-</div>
-```
-
-</section>
-
-<!-- =========================================================
-     EDITORIAL BREAK
-========================================================= -->
-
-<section class="editorial">
-
-```
-<div class="editorial-number">
-    01
-</div>
-
-
-<div class="editorial-content">
-
-    <span>
-        THE IDEA
-    </span>
-
-    <h2>
-        Great cinema
-        <strong>
-            should feel timeless.
-        </strong>
-    </h2>
-
-    <p>
-        FreeFlix brings together films that can be watched
-        legally for free and presents them with the care
-        normally reserved for premium cinema platforms.
-    </p>
-
-    <a
-        href="#collection"
-        class="editorial-link"
-    >
-        Enter the archive
-        <span>→</span>
-    </a>
-
-</div>
-
-
-<div class="editorial-mark">
-
-    <div class="editorial-circle">
-
-        <span>
-            F
-        </span>
-
-    </div>
-
-</div>
-```
-
-</section>
-
-<!-- =========================================================
-     COLLECTION
-========================================================= -->
-
-<section
-    class="content-section collection-section"
-    id="collection"
->
-
-```
-<div class="section-heading">
-
-    <div>
-
-        <span class="section-kicker">
-            THE ARCHIVE
-        </span>
+        <span class="section-label">THE EXPERIENCE</span>
 
         <h2>
-            Timeless
-            <em>stories.</em>
-        </h2>
-
-    </div>
-
-    <span class="archive-count">
-        04 / 04
-    </span>
-
-</div>
-
-
-<div class="archive-list">
-
-
-    <a href="#" class="archive-item">
-
-        <span class="archive-index">
-            01
-        </span>
-
-        <span class="archive-title">
-            Horror Classics
-        </span>
-
-        <span class="archive-description">
-            Shadows, suspense & atmosphere
-        </span>
-
-        <span class="archive-arrow">
-            →
-        </span>
-
-    </a>
-
-
-    <a href="#" class="archive-item">
-
-        <span class="archive-index">
-            02
-        </span>
-
-        <span class="archive-title">
-            Golden Comedy
-        </span>
-
-        <span class="archive-description">
-            Characters, chaos & unforgettable moments
-        </span>
-
-        <span class="archive-arrow">
-            →
-        </span>
-
-    </a>
-
-
-    <a href="#" class="archive-item">
-
-        <span class="archive-index">
-            03
-        </span>
-
-        <span class="archive-title">
-            Science Fiction
-        </span>
-
-        <span class="archive-description">
-            Strange worlds beyond imagination
-        </span>
-
-        <span class="archive-arrow">
-            →
-        </span>
-
-    </a>
-
-
-    <a href="#" class="archive-item">
-
-        <span class="archive-index">
-            04
-        </span>
-
-        <span class="archive-title">
-            Mystery
-        </span>
-
-        <span class="archive-description">
-            Secrets, clues & impossible questions
-        </span>
-
-        <span class="archive-arrow">
-            →
-        </span>
-
-    </a>
-
-</div>
-```
-
-</section>
-
-<!-- =========================================================
-     CATEGORIES
-========================================================= -->
-
-<section
-    class="category-section"
-    id="categories"
->
-
-```
-<div class="category-intro">
-
-    <span class="section-kicker">
-        BROWSE BY GENRE
-    </span>
-
-    <h2>
-        Find your
-        <em>mood.</em>
-    </h2>
-
-</div>
-
-
-<div class="category-grid">
-
-
-    <button
-        class="category-card category-horror"
-        data-filter="Horror"
-    >
-
-        <span class="category-number">
-            01
-        </span>
-
-        <span class="category-symbol">
-            ◉
-        </span>
-
-        <strong>
-            Horror
-        </strong>
-
-        <small>
-            Dark stories
-        </small>
-
-        <span class="category-arrow">
-            ↗
-        </span>
-
-    </button>
-
-
-    <button
-        class="category-card category-scifi"
-        data-filter="Sci-Fi"
-    >
-
-        <span class="category-number">
-            02
-        </span>
-
-        <span class="category-symbol">
-            ◌
-        </span>
-
-        <strong>
-            Sci-Fi
-        </strong>
-
-        <small>
-            Other worlds
-        </small>
-
-        <span class="category-arrow">
-            ↗
-        </span>
-
-    </button>
-
-
-    <button
-        class="category-card category-comedy"
-        data-filter="Comedy"
-    >
-
-        <span class="category-number">
-            03
-        </span>
-
-        <span class="category-symbol">
-            ✦
-        </span>
-
-        <strong>
-            Comedy
-        </strong>
-
-        <small>
-            Feel good
-        </small>
-
-        <span class="category-arrow">
-            ↗
-        </span>
-
-    </button>
-
-
-    <button
-        class="category-card category-drama"
-        data-filter="Drama"
-    >
-
-        <span class="category-number">
-            04
-        </span>
-
-        <span class="category-symbol">
-            ◇
-        </span>
-
-        <strong>
-            Drama
-        </strong>
-
-        <small>
-            Human stories
-        </small>
-
-        <span class="category-arrow">
-            ↗
-        </span>
-
-    </button>
-
-</div>
-```
-
-</section>
-
-<!-- =========================================================
-     EXPERIENCE
-========================================================= -->
-
-<section class="experience">
-
-```
-<div class="experience-inner">
-
-    <div class="experience-copy">
-
-        <span class="section-kicker">
-            THE FREEFLIX EXPERIENCE
-        </span>
-
-        <h2>
-            Cinema,
-            <em>without clutter.</em>
+          Built for the<br>
+          big screen.
         </h2>
 
         <p>
-            A focused streaming experience designed around
-            the film — not distractions.
+          A focused interface designed to keep your attention where
+          it belongs — on the film.
         </p>
 
-    </div>
+      </div>
 
+      <div class="experience-mark">
+        F
+      </div>
 
-    <div class="experience-features">
+    </section>
 
+    <!-- CTA -->
+    <section class="final-cta">
 
-        <div class="feature">
+      <span>FREEFLIX</span>
 
-            <span class="feature-number">
-                01
-            </span>
+      <h2>
+        Your next film<br>
+        is waiting.
+      </h2>
 
-            <div>
-
-                <strong>
-                    Beautiful discovery
-                </strong>
-
-                <p>
-                    Carefully organized collections make
-                    finding something to watch effortless.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="feature">
-
-            <span class="feature-number">
-                02
-            </span>
-
-            <div>
-
-                <strong>
-                    Built for every screen
-                </strong>
-
-                <p>
-                    From desktop cinema rooms to mobile
-                    screens, the experience adapts.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="feature">
-
-            <span class="feature-number">
-                03
-            </span>
-
-            <div>
-
-                <strong>
-                    Free & transparent
-                </strong>
-
-                <p>
-                    Content is presented only when it is
-                    legally available to watch for free.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-```
-
-</section>
-
-<!-- =========================================================
-     FINAL CTA
-========================================================= -->
-
-<section class="final-cta">
-
-```
-<div class="final-cta-symbol">
-    F
-</div>
-
-<div class="final-cta-content">
-
-    <span>
-        YOUR NEXT FILM
-    </span>
-
-    <h2>
-        Press play.
-        <em>Stay awhile.</em>
-    </h2>
-
-    <p>
-        Explore the FreeFlix archive and discover
-        something worth watching.
-    </p>
-
-    <a
-        href="#discover"
-        class="final-button"
-    >
-        Start exploring
+      <a href="#discover" class="primary-button">
+        Start Exploring
         <span>→</span>
-    </a>
+      </a>
 
-</div>
-```
+    </section>
 
-</section>
+  </main>
 
-</main>
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
-<footer class="site-footer">
-
-```
-<div class="footer-top">
+  <!-- FOOTER -->
+  <footer>
 
     <div class="footer-brand">
+      <div class="brand-logo">F</div>
+      <strong>FREEFLIX</strong>
+    </div>
 
-        <a href="#" class="brand">
+    <p>
+      A cinematic interface for legally available free films.
+    </p>
 
-            <span class="brand-logo">
-                F
-            </span>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#discover">Discover</a>
+      <a href="#categories">Categories</a>
+      <a href="#collection">Collection</a>
+    </div>
 
-            <span class="brand-name">
-                FREEFLIX
-            </span>
+    <small>
+      © 2026 FreeFlix
+    </small>
 
-        </a>
+  </footer>
 
-        <p>
-            Free cinema.
-            Beautifully presented.
-        </p>
+  <!-- MODAL -->
+  <div class="movie-modal" id="movieModal">
+
+    <div class="modal-box">
+
+      <button class="modal-close" id="modalClose">
+        ✕
+      </button>
+
+      <span class="section-label">FREEFLIX</span>
+
+      <h2 id="modalTitle">
+        Movie
+      </h2>
+
+      <p id="modalDescription">
+        Movie description.
+      </p>
+
+      <div class="modal-actions">
+
+        <button class="primary-button modal-play">
+          ▶ Play
+        </button>
+
+        <button class="secondary-button modal-secondary">
+          + My List
+        </button>
+
+      </div>
 
     </div>
 
+  </div>
 
-    <div class="footer-column">
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <span id="toastText">Done</span>
+  </div>
 
-        <span>
-            EXPLORE
-        </span>
-
-        <a href="#">
-            Home
-        </a>
-
-        <a href="#discover">
-            Discover
-        </a>
-
-        <a href="#categories">
-            Categories
-        </a>
-
-    </div>
-
-
-    <div class="footer-column">
-
-        <span>
-            INFORMATION
-        </span>
-
-        <a href="#">
-            About
-        </a>
-
-        <a href="#">
-            Privacy
-        </a>
-
-        <a href="#">
-            Terms
-        </a>
-
-    </div>
-
-
-    <div class="footer-column">
-
-        <span>
-            FOLLOW
-        </span>
-
-        <a href="#">
-            Instagram
-        </a>
-
-        <a href="#">
-            X / Twitter
-        </a>
-
-        <a href="#">
-            GitHub
-        </a>
-
-    </div>
-
-</div>
-
-
-<div class="footer-bottom">
-
-    <span>
-        © 2026 FREEFLIX
-    </span>
-
-    <span>
-        FREE & LEGALLY AVAILABLE CINEMA
-    </span>
-
-    <span>
-        MADE FOR MOVIE LOVERS
-    </span>
-
-</div>
-```
-
-</footer>
-
-<!-- =========================================================
-     MOVIE MODAL
-========================================================= -->
-
-<div
-    class="movie-modal"
-    id="movieModal"
-    aria-hidden="true"
->
-
-```
-<div class="modal-backdrop"></div>
-
-<div class="modal-window">
-
-    <button
-        class="modal-close"
-        id="modalClose"
-        aria-label="Close"
-    >
-        ×
-    </button>
-
-
-    <div class="modal-visual">
-
-        <div class="modal-f">
-            F
-        </div>
-
-        <span>
-            FREEFLIX PLAYER
-        </span>
-
-    </div>
-
-
-    <div class="modal-content">
-
-        <span class="modal-kicker">
-            MOVIE
-        </span>
-
-        <h2 id="modalTitle">
-            The First Screening
-        </h2>
-
-        <p id="modalDescription">
-            Select a legally available film to begin watching.
-        </p>
-
-
-        <div class="modal-controls">
-
-            <button class="modal-play">
-                ▶ Play
-            </button>
-
-            <button class="modal-secondary">
-                + My List
-            </button>
-
-        </div>
-
-
-        <div class="modal-notice">
-
-            <span>
-                i
-            </span>
-
-            <p>
-                Actual playback will be connected only to
-                movies that are legally available for free.
-            </p>
-
-        </div>
-
-    </div>
-
-</div>
-```
-
-</div>
-
-<!-- =========================================================
-     TOAST
-========================================================= -->
-
-<div
-    class="toast"
-    id="toast"
->
-    <span class="toast-icon">✓</span>
-    <span id="toastText">
-        Added to your list
-    </span>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
