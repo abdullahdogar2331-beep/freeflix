@@ -1,340 +1,315 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<title>FreeFlix — Watch Free Movies</title>
-<meta name="description" content="Discover free movies and cinematic entertainment with FreeFlix.">
+    <title>FreeFlix — Free Cinema, Beautifully Presented</title>
+    <meta name="description" content="Discover free and public-domain movies in a premium cinematic streaming experience.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-```
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-```
-<!-- NAVBAR -->
-<header class="navbar">
-    <a href="#" class="logo">
-        <span class="logo-mark">F</span>
+<header class="topbar">
+
+    <a class="brand" href="#">
+        <span class="brand-mark">F</span>
         <span>FREEFLIX</span>
     </a>
 
-    <nav class="nav-links">
-        <a href="#" class="active">Home</a>
+    <nav>
+        <a class="active" href="#">Home</a>
         <a href="#movies">Movies</a>
         <a href="#genres">Genres</a>
-        <a href="#about">About</a>
     </nav>
 
-    <div class="nav-actions">
-        <button class="icon-btn" aria-label="Search">⌕</button>
-
-        <button class="language-btn">
-            EN <span>⌄</span>
-        </button>
-
-        <button class="menu-btn" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+    <div class="top-actions">
+        <button class="search-btn" aria-label="Search">⌕</button>
+        <button class="lang-btn">EN <span>⌄</span></button>
     </div>
+
 </header>
 
 
-<!-- HERO -->
 <main>
 
-    <section class="hero">
+<!-- HERO -->
 
-        <div class="hero-content">
+<section class="cinema-hero">
 
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                FREE TO WATCH
-            </div>
+    <div class="hero-backdrop"></div>
 
-            <p class="hero-kicker">A NEW WAY TO WATCH</p>
+    <div class="hero-copy">
 
-            <h1>
-                Discover something
-                <span>worth watching.</span>
-            </h1>
-
-            <p class="hero-description">
-                Explore a handpicked collection of free movies,
-                timeless classics and cinematic stories — all in one place.
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#movies" class="primary-btn">
-                    <span>▶</span>
-                    Explore Movies
-                </a>
-
-                <a href="#genres" class="secondary-btn">
-                    Browse Genres
-                    <span>→</span>
-                </a>
-            </div>
-
-            <div class="hero-meta">
-                <div>
-                    <strong>FREE</strong>
-                    <span>Always</span>
-                </div>
-
-                <div class="meta-line"></div>
-
-                <div>
-                    <strong>HD</strong>
-                    <span>Quality</span>
-                </div>
-
-                <div class="meta-line"></div>
-
-                <div>
-                    <strong>CC</strong>
-                    <span>Subtitles</span>
-                </div>
-            </div>
-
+        <div class="eyebrow">
+            <span></span>
+            FEATURED FILM
         </div>
 
-        <div class="hero-visual">
+        <h1>
+            Dracula
+            <small>1931</small>
+        </h1>
 
-            <div class="hero-glow"></div>
+        <div class="hero-details">
+            <span>1931</span>
+            <i></i>
+            <span>Horror</span>
+            <i></i>
+            <span>1h 15m</span>
+            <i></i>
+            <b>FREE</b>
+        </div>
 
-            <div class="hero-poster">
+        <p>
+            Step into the shadows with one of cinema's legendary
+            classic horror films, presented as part of the free
+            public-domain collection.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#movies" class="watch-btn">
+                <span>▶</span>
+                Watch Free
+            </a>
+
+            <button class="more-btn">
+                + My List
+            </button>
+        </div>
+
+        <div class="hero-language">
+            <span>CC</span>
+            Subtitles available where provided
+        </div>
+
+    </div>
+
+    <div class="hero-poster-wrap">
+
+        <div class="hero-poster">
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Dracula%20%281931%20film%20poster%20-%20Style%20F%29.jpg"
+                alt="Dracula 1931 public domain poster"
+            >
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TRENDING -->
+
+<section class="movie-section" id="movies">
+
+    <div class="section-top">
+
+        <div>
+            <span class="section-eyebrow">CURATED CINEMA</span>
+            <h2>Trending <em>now</em></h2>
+        </div>
+
+        <a href="#">View all →</a>
+
+    </div>
+
+
+    <div class="movie-row">
+
+        <article class="movie-card">
+
+            <div class="poster">
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Dracula%20%281931%20film%20poster%20-%20Style%20F%29.jpg"
+                    alt="Dracula"
+                >
+
                 <div class="poster-overlay"></div>
 
-                <div class="poster-content">
-                    <span>FEATURED</span>
-                    <h2>THE<br>ADVENTURE</h2>
-                    <p>Where every story begins.</p>
+                <span class="tag">FREE</span>
+
+                <button class="card-play">▶</button>
+
+                <div class="card-info">
+                    <small>HORROR · 1931</small>
+                    <h3>Dracula</h3>
                 </div>
             </div>
 
-            <div class="floating-card floating-card-one">
-                <span>▶</span>
-                <div>
-                    <strong>Start Watching</strong>
-                    <small>Free movies</small>
+        </article>
+
+
+        <article class="movie-card">
+
+            <div class="poster">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20General%20%281926%29%20-%20Movie%20Poster.png"
+                    alt="The General"
+                >
+
+                <div class="poster-overlay"></div>
+
+                <span class="tag">FREE</span>
+
+                <button class="card-play">▶</button>
+
+                <div class="card-info">
+                    <small>COMEDY · 1926</small>
+                    <h3>The General</h3>
                 </div>
+
             </div>
 
-            <div class="floating-card floating-card-two">
-                <span>CC</span>
-                <div>
-                    <strong>Subtitles</strong>
-                    <small>Multiple languages</small>
+        </article>
+
+
+        <article class="movie-card">
+
+            <div class="poster">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Plan%20nine%20from%20outer%20space.jpg"
+                    alt="Plan 9 from Outer Space"
+                >
+
+                <div class="poster-overlay"></div>
+
+                <span class="tag">FREE</span>
+
+                <button class="card-play">▶</button>
+
+                <div class="card-info">
+                    <small>SCI-FI · 1959</small>
+                    <h3>Plan 9 from Outer Space</h3>
                 </div>
+
             </div>
 
-        </div>
-
-    </section>
+        </article>
 
 
-    <!-- MOVIES -->
-    <section class="content-section" id="movies">
+        <article class="movie-card">
 
-        <div class="section-heading">
-            <div>
-                <p class="section-label">CURATED FOR YOU</p>
-                <h2>Trending <span>Now</span></h2>
+            <div class="poster">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Charade%20%281963%20poster%29.jpg"
+                    alt="Charade"
+                >
+
+                <div class="poster-overlay"></div>
+
+                <span class="tag">FREE</span>
+
+                <button class="card-play">▶</button>
+
+                <div class="card-info">
+                    <small>MYSTERY · 1963</small>
+                    <h3>Charade</h3>
+                </div>
+
             </div>
 
-            <a href="#" class="view-all">
-                View all <span>→</span>
-            </a>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- SECOND ROW -->
+
+<section class="movie-section darker">
+
+    <div class="section-top">
+
+        <div>
+            <span class="section-eyebrow">CLASSIC COLLECTION</span>
+            <h2>Timeless <em>stories</em></h2>
         </div>
 
+        <a href="#">Explore →</a>
 
-        <div class="movie-grid">
+    </div>
 
-            <article class="movie-card">
-                <div class="movie-image movie-one">
-                    <div class="movie-shade"></div>
+    <div class="collection-banner">
 
-                    <span class="quality">HD</span>
-
-                    <button class="play-button">▶</button>
-
-                    <div class="movie-info">
-                        <span>Adventure</span>
-                        <h3>The Journey</h3>
-                        <p>2024 · 1h 48m</p>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="movie-card">
-                <div class="movie-image movie-two">
-                    <div class="movie-shade"></div>
-
-                    <span class="quality">HD</span>
-
-                    <button class="play-button">▶</button>
-
-                    <div class="movie-info">
-                        <span>Drama</span>
-                        <h3>Last Horizon</h3>
-                        <p>2023 · 2h 04m</p>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="movie-card">
-                <div class="movie-image movie-three">
-                    <div class="movie-shade"></div>
-
-                    <span class="quality">HD</span>
-
-                    <button class="play-button">▶</button>
-
-                    <div class="movie-info">
-                        <span>Thriller</span>
-                        <h3>Night Signal</h3>
-                        <p>2022 · 1h 52m</p>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="movie-card">
-                <div class="movie-image movie-four">
-                    <div class="movie-shade"></div>
-
-                    <span class="quality">HD</span>
-
-                    <button class="play-button">▶</button>
-
-                    <div class="movie-info">
-                        <span>Sci-Fi</span>
-                        <h3>Beyond Earth</h3>
-                        <p>2024 · 1h 56m</p>
-                    </div>
-                </div>
-            </article>
-
-        </div>
-
-    </section>
-
-
-    <!-- GENRES -->
-    <section class="genre-section" id="genres">
-
-        <div class="section-heading">
-            <div>
-                <p class="section-label">EXPLORE</p>
-                <h2>Find your <span>mood.</span></h2>
-            </div>
-        </div>
-
-        <div class="genre-grid">
-
-            <a href="#" class="genre-card">
-                <span>01</span>
-                <strong>Action</strong>
-                <small>Explore →</small>
-            </a>
-
-            <a href="#" class="genre-card">
-                <span>02</span>
-                <strong>Drama</strong>
-                <small>Explore →</small>
-            </a>
-
-            <a href="#" class="genre-card">
-                <span>03</span>
-                <strong>Comedy</strong>
-                <small>Explore →</small>
-            </a>
-
-            <a href="#" class="genre-card">
-                <span>04</span>
-                <strong>Horror</strong>
-                <small>Explore →</small>
-            </a>
-
-            <a href="#" class="genre-card">
-                <span>05</span>
-                <strong>Sci-Fi</strong>
-                <small>Explore →</small>
-            </a>
-
-            <a href="#" class="genre-card">
-                <span>06</span>
-                <strong>Documentary</strong>
-                <small>Explore →</small>
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- FEATURE -->
-    <section class="feature-section">
-
-        <div class="feature-content">
-            <p class="section-label">BUILT FOR MOVIE LOVERS</p>
+        <div>
+            <span>THE FREEFLIX ARCHIVE</span>
 
             <h2>
-                Your movie night,
-                <span>without the limits.</span>
+                Cinema that
+                <strong>belongs to everyone.</strong>
             </h2>
 
             <p>
-                A clean, distraction-free way to discover free cinema.
-                Choose your movie, select your language and settle in.
+                Explore films that are free to watch and legally
+                available in the public domain.
             </p>
 
-            <div class="feature-list">
-
-                <div>
-                    <span>✓</span>
-                    <strong>Free to watch</strong>
-                </div>
-
-                <div>
-                    <span>CC</span>
-                    <strong>Subtitle support</strong>
-                </div>
-
-                <div>
-                    <span>文</span>
-                    <strong>Multiple languages</strong>
-                </div>
-
-            </div>
+            <a href="#movies">Explore the collection →</a>
         </div>
 
-    </section>
+    </div>
+
+</section>
+
+
+<!-- GENRES -->
+
+<section class="genres" id="genres">
+
+    <div class="section-top">
+
+        <div>
+            <span class="section-eyebrow">BROWSE BY MOOD</span>
+            <h2>What are you <em>watching?</em></h2>
+        </div>
+
+    </div>
+
+    <div class="genre-grid">
+
+        <a href="#" class="genre horror">
+            <span>01</span>
+            <strong>Horror</strong>
+        </a>
+
+        <a href="#" class="genre sci-fi">
+            <span>02</span>
+            <strong>Sci-Fi</strong>
+        </a>
+
+        <a href="#" class="genre comedy">
+            <span>03</span>
+            <strong>Comedy</strong>
+        </a>
+
+        <a href="#" class="genre drama">
+            <span>04</span>
+            <strong>Drama</strong>
+        </a>
+
+    </div>
+
+</section>
 
 </main>
 
 
-<!-- FOOTER -->
-<footer id="about">
+<footer>
 
-    <div class="footer-brand">
-        <a href="#" class="logo">
-            <span class="logo-mark">F</span>
+    <div>
+        <a class="brand" href="#">
+            <span class="brand-mark">F</span>
             <span>FREEFLIX</span>
         </a>
 
@@ -350,16 +325,14 @@
         <a href="#">Privacy</a>
     </div>
 
-    <p class="copyright">
-        © 2026 FreeFlix. Free and legally available movies only.
-    </p>
+    <small>
+        © 2026 FreeFlix · Free and legally available content only.
+    </small>
 
 </footer>
 
 
 <script src="script.js"></script>
-```
 
 </body>
 </html>
-
