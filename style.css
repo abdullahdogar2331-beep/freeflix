@@ -1225,15 +1225,19 @@ font-size: 17px;
 }
 
 .hero {
-min-height: 700px;
-background:
-linear-gradient(
-90deg,
-rgba(7,7,7,.98) 0%,
-rgba(7,7,7,.90) 55%,
-rgba(7,7,7,.74) 100%
-),
-url("hero.jpg") center center / cover no-repeat;
+  min-height: 700px;
+}
+
+.hero-bg {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7,7,7,.82) 0%,
+      rgba(7,7,7,.52) 55%,
+      rgba(7,7,7,.30) 100%
+    ),
+    url("./hero.jpg") center center / cover no-repeat;
+}
 }
 
 .hero-content {
