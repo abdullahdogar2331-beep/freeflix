@@ -1419,4 +1419,118 @@ left: 15px;
 max-width: none;
 }
 }
+/* =========================================================
+   FINAL HERO FIX
+========================================================= */
+
+.hero {
+  position: relative;
+  min-height: 760px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7,7,7,.78) 0%,
+      rgba(7,7,7,.58) 35%,
+      rgba(7,7,7,.28) 70%,
+      rgba(7,7,7,.38) 100%
+    ),
+    url("./hero.jpg") center center / cover no-repeat;
+}
+
+/* Keep text above image */
+.hero-content {
+  position: relative;
+  z-index: 5;
+}
+
+/* Hero buttons */
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: .22s ease;
+}
+
+.primary-button {
+  border: 1px solid var(--lime);
+  background: var(--lime);
+  color: #050505;
+}
+
+.primary-button:hover {
+  background: #fff;
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+
+.secondary-button:hover {
+  border-color: var(--lime);
+  color: var(--lime);
+  background: rgba(233,255,69,.08);
+  transform: translateY(-2px);
+}
+
+/* Old decorative hero art */
+.hero-art {
+  position: absolute;
+  right: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+
+  .hero {
+    min-height: 700px;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(7,7,7,.82) 0%,
+        rgba(7,7,7,.55) 55%,
+        rgba(7,7,7,.30) 100%
+      ),
+      url("./hero.jpg") center center / cover no-repeat;
+  }
+
+  .hero-buttons {
+    gap: 8px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    min-height: 46px;
+    padding: 0 18px;
+  }
+
+  .hero-art {
+    display: none;
+  }
+}
 
